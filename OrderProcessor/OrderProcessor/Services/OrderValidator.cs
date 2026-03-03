@@ -2,8 +2,17 @@ using OrderProcessor.Models;
 
 namespace OrderProcessor.Services;
 
+/// <summary>
+/// A service responsible for validating orders before they are processed.
+/// </summary>
 public sealed class OrderValidator
 {
+    /// <summary>
+    /// Validates the given order by checking that it contains at least one item and that each
+    /// item has a positive quantity and non-negative price.
+    /// </summary>
+    /// <param name="order">The order to validate.</param>
+    /// <exception cref="InvalidOperationException">Thrown when the order is invalid.</exception>
     public void Validate(Order order)
     {
         ArgumentNullException.ThrowIfNull(order, nameof(order));

@@ -3,8 +3,18 @@ using OrderProcessor.Services;
 
 namespace OrderProcessor;
 
+/// <summary>
+/// The main entry point for the OrderProcessor application.
+/// </summary>
 class Program
 {
+    /// <summary>
+    /// The main method initializes the necessary services, creates a sample order, validates it,
+    /// and calculates the total price, including tax if applicable, before printing the result
+    /// to the console.
+    /// </summary>
+    /// <param name="args">The command-line arguments passed to the application.</param>
+    /// <returns>A task that represents the asynchronous operation.</returns>
     static async Task Main(string[] args)
     {
         var httpClient = new HttpClient
