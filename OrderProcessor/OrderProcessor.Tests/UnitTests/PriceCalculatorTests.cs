@@ -46,7 +46,7 @@ public sealed class PriceCalculatorTests
         Assert.Equal(100.00m, total);
     }
 
-    [Fact]
+    [Fact(Skip = "Demonstrating test failure output")]
     public async Task CalculateTotal_TaxableOrder_DoesNotApplyTax_FailingDemo()
     {
         // INTENTIONAL FAILURE:
