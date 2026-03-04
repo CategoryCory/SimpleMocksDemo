@@ -15,9 +15,6 @@ jobs:
         uses: docker/setup-compose-action@v1
         with:
           version: latest
-        # run: |
-        #   sudo apt-get update
-        #   sudo apt-get install -y docker-compose-plugin
 
       - name: Start tax-service (Docker Compose)
         working-directory: tax-service
@@ -43,7 +40,7 @@ jobs:
 
       - name: Run .NET tests
         run: |
-          dotnet build OrderProcessor/OrderProcessor.slnx --configuration Release
+          dotnet build OrderProcessor/OrderProcessorDemo.slnx --configuration Release
           dotnet test OrderProcessor/OrderProcessor.Tests/OrderProcessor.Tests.csproj -c Release --no-build --verbosity minimal
 
       - name: Install CMake and build tools
