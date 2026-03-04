@@ -44,9 +44,9 @@ bool HttpTaxService::IsOrderTaxable(const Order& order) {
         body["items"] = json::array();
         for (const auto& [name, quantity, price] : order.items) {
             json jitem;
-            jitem["name"] = name;            // map C++ `sku` to "name"
+            jitem["name"] = name;
             jitem["quantity"] = quantity;
-            jitem["price"] = price;     // map `unitPrice` to "price"
+            jitem["price"] = price;
             body["items"].push_back(jitem);
         }
 
