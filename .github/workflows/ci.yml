@@ -41,7 +41,7 @@ jobs:
       - name: Run .NET tests
         run: |
           dotnet build OrderProcessor/OrderProcessorDemo.slnx --configuration Release
-          dotnet test OrderProcessor/OrderProcessor.Tests/OrderProcessor.Tests.csproj -c Release --no-build --verbosity minimal
+          dotnet test OrderProcessor/OrderProcessor.Tests/OrderProcessor.Tests.csproj -c Release --no-build --verbosity detailed
 
       - name: Install CMake and build tools
         run: |
