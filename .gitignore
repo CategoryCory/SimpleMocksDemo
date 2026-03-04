@@ -750,9 +750,4 @@ dkms.conf
 # Compiled Static libraries
 *.lai
 
-# Executables
-
-### VisualStudio Patch ###
-# Additional files built by Visual Studio
-
 # End of https://www.toptal.com/developers/gitignore/api/python,dotnetcore,visualstudio,visualstudiocode,jetbrains+all
